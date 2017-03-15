@@ -30,8 +30,8 @@ import {
 
     let serviceMetadata : ServiceMetadata = initMetadata();
         
-    //let path: string = "..\\src\\perf\\1000.json";    
-    let path: string = "..\\..\\src\\perf\\1.json";
+    //let path: string = "src\\perf\\1000.json";    
+    let path: string = "src\\perf\\1.json";
     let json =  fs.readFileSync(path,'utf8');
     let entities = JSON.parse(json);        
 
@@ -51,7 +51,7 @@ import {
 
 
 function initMetadata() : ServiceMetadata{
-        let mpath: string = "..\\..\\src\\perf\\metadata.xml";
+        let mpath: string = "src\\perf\\metadata.xml";
         let xml =  fs.readFileSync(mpath,'utf8');
         let metadata = odatajs.oData.parseMetadata(xml);        
         return new ServiceMetadata(metadata);        

@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "start": "node dist/perf/perftest.js"
   },
   "repository": {
-    "type": "git",
+    "type": "git",    
     "url": "http://tfs-emea.ihs.com:8080/tfs/EMEA_SPA_Collection/Timeseries%20data%20platform/_git/excel-client"
   },
   "author": "",
