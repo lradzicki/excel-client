@@ -24,26 +24,26 @@ import {
 } from '../odata/Model';
 
 
-
+export const main = () => {
     console.log('Performance testing started...');
 
 
     let serviceMetadata : ServiceMetadata = initMetadata();
         
-    //let path: string = "src\\perf\\1000.json";    
-    let path: string = "src\\perf\\1.json";
+    let path: string = "src\\perf\\1000.json";    
+    // let path: string = "src\\perf\\1.json";
     let json =  fs.readFileSync(path,'utf8');
     let entities = JSON.parse(json);        
 
-    console.time('tomatrix');
+    console.profile('tomatrix');
     let parser = new Collection(serviceMetadata.EntitySets['Drugs'].entityType);
     let matrix = parser.toMatrix(entities);
-    console.timeEnd('tomatrix');
+    console.profileEnd('tomatrix');
         
-    console.time('frommatrix');
+    console.profile('frommatrix');
     let coordinatesTransformer = new CoordinatesTransformer;
     let objects = parser.fromMatrix('nomatter', matrix,coordinatesTransformer);
-    console.timeEnd('frommatrix');
+    console.profileEnd('frommatrix');
 
     console.log('done');        
 
@@ -55,4 +55,5 @@ function initMetadata() : ServiceMetadata{
         let xml =  fs.readFileSync(mpath,'utf8');
         let metadata = odatajs.oData.parseMetadata(xml);        
         return new ServiceMetadata(metadata);        
+}
 }
