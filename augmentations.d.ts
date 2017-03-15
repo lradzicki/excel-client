@@ -1,13 +1,4 @@
-import { ReactType, Attributes, ReactNode, ReactElement } from 'react';
 import { List, ListIterator, Dictionary, DictionaryIterator, NumericDictionary, NumericDictionaryIterator, ObjectIterator } from 'lodash';
-
-declare module "react" {
-    export function createElement<P>(
-        type: ReactType,
-        props?: Attributes & P,
-        ...children: ReactNode[]): ReactElement<P>;
-}
-
 
 declare module "lodash" {
     interface LoDashStatic {

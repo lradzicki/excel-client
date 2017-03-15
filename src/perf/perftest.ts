@@ -1,6 +1,5 @@
 import * as odatajs from 'jaydata-odatajs';
 import * as _ from 'lodash';
-import { assert } from 'chai';
 import fs = require('fs');
 //import { CoordinatesTransformer, Row, EdmString, EdmTypes, EntityType, Property, ComplexType, Collection } from '../odata/Model';
 import { processPathsToCollectionsElements, objectToArray } from '../utils/matrixOperations';
