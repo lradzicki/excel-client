@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:DataServices>
+        <Schema Namespace="DataPlatform" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityType Name="Drug">
+                <Key>
+                    <PropertyRef Name="Id" />
+                </Key>
+                <Property Name="Id" Type="Edm.String" Nullable="false" />
+                <Property Name="Active_Ingredient" Type="Edm.String" />
+                <Property Name="Active_Ingredient_Item" Type="Edm.String" />
+                <Property Name="Approval_Date" Type="Edm.Date" />
+                <Property Name="ATC_Code" Type="Edm.String" />
+                <Property Name="Authorization_Procedure" Type="Edm.String" />
+                <Property Name="Brand_Name" Type="Edm.String" />
+                <Property Name="Centralized_Number" Type="Edm.String" />
+                <Property Name="Company" Type="Edm.String" />
+                <Property Name="Parent_Company_CALC" Type="Edm.String" />
+                <Property Name="Cost_per_day_DDD" Type="Edm.Double" Nullable="false" />
+                <Property Name="Country" Type="Edm.String" />
+                <Property Name="Country_Region_CALC" Type="Edm.String" />
+                <Property Name="Country_Id" Type="Edm.String" />
+                <Property Name="Currency" Type="Edm.String" />
+                <Property Name="CurrencyLabel" Type="Edm.String" />
+                <Property Name="DateDeValidation" Type="Edm.Date" />
+                <Property Name="DDD" Type="Edm.String" />
+                <Property Name="DDD_CALC" Type="Edm.String" />
+                <Property Name="DDD_Units" Type="Edm.String" />
+                <Property Name="DDD_Value" Type="Edm.Double" Nullable="false" />
+                <Property Name="Dose" Type="Edm.Double" Nullable="false" />
+                <Property Name="Dose_Unit" Type="Edm.String" />
+                <Property Name="EMEA_Detail_Number" Type="Edm.String" />
+                <Property Name="ExD" Type="Edm.Boolean" Nullable="false" />
+                <Property Name="Form" Type="Edm.String" />
+                <Property Name="Full_Indication" Type="Edm.String" />
+                <Property Name="Generic_Status" Type="Edm.String" />
+                <Property Name="Hospital_Status" Type="Edm.String" />
+                <Property Name="Imported" Type="Edm.Boolean" Nullable="false" />
+                <Property Name="Import_Id" Type="Edm.String" />
+                <Property Name="Import_Id_CALC" Type="Edm.String" />
+                <Property Name="Indexing_Date" Type="Edm.Date" />
+                <Property Name="Input_Language" Type="Edm.String" />
+                <Property Name="Main_Id" Type="Edm.String" />
+                <Property Name="Manufacturer_Price" Type="Edm.Double" Nullable="false" />
+                <Property Name="Manufacturer_price_origin_CALC" Type="Edm.String" />
+                <Property Name="Manufacturer_Price_Comment" Type="Edm.String" />
+                <Property Name="Manufacturer_Price_History" Type="Collection(DataPlatform.DrugPrice)" />
+                <Property Name="Marketing_date" Type="Edm.Date" />
+                <Property Name="Number_of_Units" Type="Edm.String" />
+                <Property Name="Parallel_Import" Type="Edm.String" />
+                <Property Name="pk" Type="Edm.String" />
+                <Property Name="Presentation_Withdrawn_CALC" Type="Edm.Boolean" Nullable="false" />
+                <Property Name="Price_Date" Type="Edm.Date" />
+                <Property Name="Price_Id" Type="Edm.String" />
+                <Property Name="Price_per_unit" Type="Edm.Double" Nullable="false" />
+                <Property Name="Regulatory_submission_date" Type="Edm.Date" />
+                <Property Name="Reimbursement_Status" Type="Edm.String" />
+                <Property Name="Reimbursement_Status_Comment" Type="Edm.String" />
+                <Property Name="Retail_price" Type="Edm.Double" Nullable="false" />
+                <Property Name="Retail_price_origin_CALC" Type="Edm.String" />
+                <Property Name="Retail_Price_Comment" Type="Edm.String" />
+                <Property Name="Retail_price_History" Type="Collection(DataPlatform.DrugPrice)" />
+                <Property Name="smr" Type="Edm.String" />
+                <Property Name="Strength" Type="Edm.String" />
+                <Property Name="Strength_comment" Type="Edm.String" />
+                <Property Name="Strength_unit" Type="Edm.String" />
+                <Property Name="Strength_value" Type="Edm.Double" Nullable="false" />
+                <Property Name="Strength_CALC" Type="Edm.String" />
+                <Property Name="Strength_unit_CALC" Type="Edm.String" />
+                <Property Name="Strength_value_CALC" Type="Edm.Double" Nullable="false" />
+                <Property Name="Therapeutic_Class" Type="Edm.String" />
+                <Property Name="TimeStamp" Type="Edm.Date" />
+                <Property Name="Volume" Type="Edm.Double" Nullable="false" />
+                <Property Name="Volume_Units" Type="Edm.String" />
+                <Property Name="Wholesaler_price" Type="Edm.Double" Nullable="false" />
+                <Property Name="Wholesaler_price_origin_CALC" Type="Edm.String" />
+                <Property Name="Wholesaler_price_Comment" Type="Edm.String" />
+                <Property Name="Wholesaler_price_History" Type="Collection(DataPlatform.DrugPrice)" />
+                <Property Name="AI_CPLX_Item" Type="Collection(DataPlatform.POLIAICPLXItem)" />
+                <NavigationProperty Name="Country_NAV" Type="DataPlatform.DictionaryRow" />
+            </EntityType>
+            <EntityType Name="DictionaryRow">
+                <Key>
+                    <PropertyRef Name="Id" />
+                </Key>
+                <Property Name="Id" Type="Edm.String" Nullable="false" />
+                <Property Name="Value" Type="Edm.String" Nullable="false" />
+            </EntityType>
+            <EntityType Name="OperationRequest">
+                <Key>
+                    <PropertyRef Name="Id" />
+                </Key>
+                <Property Name="Id" Type="Edm.String" Nullable="false" />
+                <Property Name="Type" Type="Edm.String" />
+                <Property Name="Status" Type="Edm.String" />
+                <Property Name="EntityId" Type="Edm.String" />
+                <Property Name="EntityUri" Type="Edm.String" />
+            </EntityType>
+            <EntityType Name="MagellanTimeseries">
+                <Key>
+                    <PropertyRef Name="Id" />
+                </Key>
+                <Property Name="Id" Type="Edm.String" Nullable="false" />
+                <Property Name="Mnemonic" Type="Edm.String" />
+            </EntityType>
+            <EntityType Name="DrugData">
+                <Key>
+                    <PropertyRef Name="Id" />
+                </Key>
+                <Property Name="Id" Type="Edm.String" Nullable="false" />
+                <Property Name="Active_Ingredient" Type="Edm.String" />
+                <Property Name="Active_Ingredient_Item" Type="Edm.String" />
+                <Property Name="Approval_Date" Type="Edm.Date" />
+                <Property Name="ATC_Code" Type="Edm.String" />
+                <Property Name="Authorization_Procedure" Type="Edm.String" />
+                <Property Name="Brand_Name" Type="Edm.String" />
+                <Property Name="Centralized_Number" Type="Edm.String" />
+                <Property Name="Company" Type="Edm.String" />
+                <Property Name="Parent_Company_CALC" Type="Edm.String" />
+                <Property Name="Cost_per_day_DDD" Type="Edm.Double" Nullable="false" />
+                <Property Name="Country" Type="Edm.String" />
+                <Property Name="Country_Region_CALC" Type="Edm.String" />
+                <Property Name="Country_Id" Type="Edm.String" />
+                <Property Name="Currency" Type="Edm.String" />
+                <Property Name="CurrencyLabel" Type="Edm.String" />
+                <Property Name="DateDeValidation" Type="Edm.Date" />
+                <Property Name="DDD" Type="Edm.String" />
+                <Property Name="DDD_CALC" Type="Edm.String" />
+                <Property Name="DDD_Units" Type="Edm.String" />
+                <Property Name="DDD_Value" Type="Edm.Double" Nullable="false" />
+                <Property Name="Dose" Type="Edm.Double" Nullable="false" />
+                <Property Name="Dose_Unit" Type="Edm.String" />
+                <Property Name="EMEA_Detail_Number" Type="Edm.String" />
+                <Property Name="ExD" Type="Edm.Boolean" Nullable="false" />
+                <Property Name="Form" Type="Edm.String" />
+                <Property Name="Full_Indication" Type="Edm.String" />
+                <Property Name="Generic_Status" Type="Edm.String" />
+                <Property Name="Hospital_Status" Type="Edm.String" />
+                <Property Name="Imported" Type="Edm.Boolean" Nullable="false" />
+                <Property Name="Import_Id" Type="Edm.String" />
+                <Property Name="Import_Id_CALC" Type="Edm.String" />
+                <Property Name="Indexing_Date" Type="Edm.Date" />
+                <Property Name="Input_Language" Type="Edm.String" />
+                <Property Name="Main_Id" Type="Edm.String" />
+                <Property Name="Manufacturer_Price" Type="Edm.Double" Nullable="false" />
+                <Property Name="Manufacturer_price_origin_CALC" Type="Edm.String" />
+                <Property Name="Manufacturer_Price_Comment" Type="Edm.String" />
+                <Property Name="Manufacturer_Price_History" Type="Collection(DataPlatform.DrugPrice)" />
+                <Property Name="Marketing_date" Type="Edm.Date" />
+                <Property Name="Number_of_Units" Type="Edm.String" />
+                <Property Name="Parallel_Import" Type="Edm.String" />
+                <Property Name="pk" Type="Edm.String" />
+                <Property Name="Presentation_Withdrawn_CALC" Type="Edm.Boolean" Nullable="false" />
+                <Property Name="Price_Date" Type="Edm.Date" />
+                <Property Name="Price_Id" Type="Edm.String" />
+                <Property Name="Price_per_unit" Type="Edm.Double" Nullable="false" />
+                <Property Name="Regulatory_submission_date" Type="Edm.Date" />
+                <Property Name="Reimbursement_Status" Type="Edm.String" />
+                <Property Name="Reimbursement_Status_Comment" Type="Edm.String" />
+                <Property Name="Retail_price" Type="Edm.Double" Nullable="false" />
+                <Property Name="Retail_price_origin_CALC" Type="Edm.String" />
+                <Property Name="Retail_Price_Comment" Type="Edm.String" />
+                <Property Name="Retail_price_History" Type="Collection(DataPlatform.DrugPrice)" />
+                <Property Name="smr" Type="Edm.String" />
+                <Property Name="Strength" Type="Edm.String" />
+                <Property Name="Strength_comment" Type="Edm.String" />
+                <Property Name="Strength_unit" Type="Edm.String" />
+                <Property Name="Strength_value" Type="Edm.Double" Nullable="false" />
+                <Property Name="Strength_CALC" Type="Edm.String" />
+                <Property Name="Strength_unit_CALC" Type="Edm.String" />
+                <Property Name="Strength_value_CALC" Type="Edm.Double" Nullable="false" />
+                <Property Name="Therapeutic_Class" Type="Edm.String" />
+                <Property Name="TimeStamp" Type="Edm.Date" />
+                <Property Name="Volume" Type="Edm.Double" Nullable="false" />
+                <Property Name="Volume_Units" Type="Edm.String" />
+                <Property Name="Wholesaler_price" Type="Edm.Double" Nullable="false" />
+                <Property Name="Wholesaler_price_origin_CALC" Type="Edm.String" />
+                <Property Name="Wholesaler_price_Comment" Type="Edm.String" />
+                <Property Name="Wholesaler_price_History" Type="Collection(DataPlatform.DrugPrice)" />
+                <Property Name="AI_CPLX_Item" Type="Collection(DataPlatform.POLIAICPLXItem)" />
+                <NavigationProperty Name="Country_NAV" Type="DataPlatform.DictionaryRow" />
+            </EntityType>
+            <ComplexType Name="DrugPrice">
+                <Property Name="Date" Type="Edm.Date" />
+                <Property Name="Value" Type="Edm.Double" Nullable="false" />
+            </ComplexType>
+            <ComplexType Name="POLIAICPLXItem">
+                <Property Name="Active_Ingredient" Type="Edm.String" />
+                <Property Name="Strength" Type="Edm.String" />
+                <Property Name="Strength_Unit" Type="Edm.String" />
+            </ComplexType>
+            <Action Name="RequestCreation" IsBound="true">
+                <Parameter Name="bindingParameter" Type="Collection(DataPlatform.Drug)" />
+                <Parameter Name="Priority" Type="Edm.Int32" Nullable="false" />
+                <Parameter Name="Message" Type="Edm.String" Unicode="false" />
+                <Parameter Name="DrugData" Type="Collection(DataPlatform.DrugData)" />
+                <ReturnType Type="Collection(DataPlatform.OperationRequest)" />
+            </Action>
+            <Function Name="UnapprovedDrugs" IsBound="true">
+                <Parameter Name="bindingParameter" Type="Collection(DataPlatform.Drug)" />
+                <ReturnType Type="Collection(DataPlatform.Drug)" />
+            </Function>
+            <Action Name="RequestUpdate" IsBound="true">
+                <Parameter Name="bindingParameter" Type="Collection(DataPlatform.Drug)" />
+                <Parameter Name="Priority" Type="Edm.Int32" Nullable="false" />
+                <Parameter Name="DrugData" Type="Collection(DataPlatform.DrugData)" />
+                <ReturnType Type="Collection(DataPlatform.OperationRequest)" />
+            </Action>
+            <Action Name="RequestRemoval" IsBound="true">
+                <Parameter Name="bindingParameter" Type="Collection(DataPlatform.Drug)" />
+                <Parameter Name="Id" Type="Collection(Edm.String)" Unicode="false" />
+                <ReturnType Type="Collection(DataPlatform.OperationRequest)" />
+            </Action>
+            <EntityContainer Name="DefaultContainer">
+                <EntitySet Name="Drugs" EntityType="DataPlatform.Drug">
+                    <NavigationPropertyBinding Path="Country_NAV" Target="Countries" />
+                    <Annotation Term="DataPlatform.BusinessLine" String="POLI" />
+                    <Annotation Term="DataPlatform.Kind" String="Entities" />
+                </EntitySet>
+                <EntitySet Name="Countries" EntityType="DataPlatform.DictionaryRow">
+                    <Annotation Term="DataPlatform.BusinessLine" String="POLI" />
+                    <Annotation Term="DataPlatform.Kind" String="Dictionaries" />
+                </EntitySet>
+                <EntitySet Name="OperationRequest" EntityType="DataPlatform.OperationRequest">
+                    <Annotation Term="DataPlatform.BusinessLine" String="Common" />
+                    <Annotation Term="DataPlatform.Kind" String="Entities" />
+                </EntitySet>
+                <EntitySet Name="MagellanTimeseries" EntityType="DataPlatform.MagellanTimeseries">
+                    <Annotation Term="DataPlatform.BusinessLine" String="ECR" />
+                    <Annotation Term="DataPlatform.Kind" String="Entities" />
+                </EntitySet>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

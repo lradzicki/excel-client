@@ -1,0 +1,100 @@
+[
+
+{    
+  "@odata.context": "http://localhost:23890/$metadata#Drugs/$entity",
+  "Id": "Argentina_07795304049123",
+  "Active_Ingredient": "INTERFERON GAMMA",
+  "Active_Ingredient_Item": "INTERFERON GAMMA",
+  "Approval_Date": null,
+  "ATC_Code": "L03A",
+  "Authorization_Procedure": "NATIONAL",
+  "Brand_Name": "IMUKIN",
+  "Centralized_Number": null,
+  "Company": "BOEHRINGER INGELHEIM",
+  "Parent_Company_CALC": "BOEHRINGER INGELHEIM",
+  "Cost_per_day_DDD": 0,
+  "Country": "Argentina",
+  "Country_Region_CALC": "",
+  "Country_Id": "862058044",
+  "Currency": "ARS",
+  "CurrencyLabel": "Argentine Peso",
+  "DateDeValidation": "2016-07-12",
+  "DDD": "0.04 MG",
+  "DDD_CALC": null,
+  "DDD_Units": "MG",
+  "DDD_Value": 0.04,
+  "Dose": 0,
+  "Dose_Unit": null,
+  "EMEA_Detail_Number": null,
+  "ExD": false,
+  "Form": "SOLUTION FOR INJECTION (VIAL) - 0.5 ML",
+  "Full_Indication": "",
+  "Generic_Status": "4",
+  "Hospital_Status": "0",
+  "Imported": false,
+  "Import_Id": "07795304049123",
+  "Import_Id_CALC": "",
+  "Indexing_Date": "2016-07-11",
+  "Input_Language": "En",
+  "Main_Id": "1075385785",
+  "Manufacturer_Price": 0,
+  "Manufacturer_price_origin_CALC": null,
+  "Manufacturer_Price_Comment": "",
+  "Marketing_date": null,
+  "Number_of_Units": "1",
+  "Parallel_Import": "0",
+  "pk": "07795304049123/L03A/Argentina/INTERFERON GAMMA/IMUKIN/BOEHRINGER INGELHEIM/0.1/MG/0.1 MG/0.5 ML (2 MIU/0.5 ML)/SOLUTION FOR INJECTION (VIAL) - 0.5 ML/1",
+  "Presentation_Withdrawn_CALC": false,
+  "Price_Date": "2016-05-20",
+  "Price_Id": "41321086",
+  "Price_per_unit": 0,
+  "Regulatory_submission_date": null,
+  "Reimbursement_Status": "NO",
+  "Reimbursement_Status_Comment": "",
+  "Retail_price": 1289.17,
+  "Retail_price_origin_CALC": "Source",
+  "Retail_Price_Comment": "",
+  "smr": "",
+  "Strength": "0.1 MG",
+  "Strength_comment": "0.1 MG/0.5 ML (2 MIU/0.5 ML)",
+  "Strength_unit": "MG",
+  "Strength_value": 0.1,
+  "Strength_CALC": null,
+  "Strength_unit_CALC": null,
+  "Strength_value_CALC": 0,
+  "Therapeutic_Class": "IMMUNOSTIMULANTS",
+  "TimeStamp": "2016-07-12",
+  "Volume": 0,
+  "Volume_Units": null,
+  "Wholesaler_price": 0,
+  "Wholesaler_price_origin_CALC": null,
+  "Wholesaler_price_Comment": "",
+  "Manufacturer_Price_History": [],
+  "Retail_price_History": [
+    {
+      "Date": "2016-05-20",
+      "Value": 1289.17
+    }
+  ],
+  "Wholesaler_price_History": [],
+  "AI_CPLX_Item": [
+    {
+      "Active_Ingredient": "NEOMYCIN",
+      "Strength": "40",
+      "Strength_Unit": "MG/ML"
+    },
+    {
+      "Active_Ingredient": "POLYMYXIN B",
+      "Strength": "20",
+      "Strength_Unit": "TIU / ML"
+    },
+    {
+      "Active_Ingredient": "Ofloxacin",
+      "Strength": "120",
+      "Strength_Unit": "TIU / ML"
+    }
+  ]
+    
+}
+
+]
